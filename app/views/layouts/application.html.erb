@@ -9,6 +9,20 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
-</html>
+
+<body>
+<nav>
+  <ul>
+    <li><%= link_to 'Home', simple_pages_index_path%></li>
+    <li><%= link_to 'Products', products_path%></li>
+    
+  </ul>
+</nav>
+
+<%= yield %>
+
+<footer>
+  &copy; wafaa abu dahrouj
+</footer>
+</body>
+
