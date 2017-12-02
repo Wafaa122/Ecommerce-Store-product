@@ -1,10 +1,13 @@
-<div class="row">
-<% @products.each do |product| %>
-    <div class="col-sm-2 col-md-4">
-      <h1><%= link_to product.name, product %></h1>
-      <p><%= product.description %></p>
-      <p><%= product.colour%></p>
-      <strong>$ <%= product.price %></strong>
-    </div><!-- /col -->
-<% end %>
+<div class="Container-fluid">
+<div class="col-sm-2 col-md-4">
+  <p><%= image_tag(product.image_url, class: "img-responsive") %>
+  </p>
+  <h1><%= link_to product.name, product %></h1>
+  <p><%= product.description %></p>
+  <p> <strong>Color:</strong> <%= product.colour %></p>
+  <p> <strong>Price:</strong> <%= product.price %> €</p>
+  <p> <%= link_to 'Show', product %>
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</div><!-- /col -->
 </div>

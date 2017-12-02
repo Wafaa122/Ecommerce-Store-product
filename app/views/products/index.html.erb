@@ -1,36 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="Container-fluid">
+<div class="container">
 
-<h1>Products</h1>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>colour</th>
-      <th>price</th>
-      <th colspan="3"></th>
+  <h1>Products</h1>
 
-    </tr>
-  </thead>
 
-  <tbody>
+  <div class="row prod-inner">
+
     <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= product.colour%></td>
-        <td><%= product.price %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <%= render partial: "product", locals: {product: product} %>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+  </div>
 
-<%= link_to 'New Product', new_product_path %>
+
+
+  <div class="btn-control-group">
+    <%= link_to new_product_path, class: 'btn btn-default' do %>
+        <i class="glyphicon glyphicon-plus"></i> New Product
+    <% end %>
+  </div>
+</div>
+
+</div>
