@@ -38,7 +38,10 @@
             <%= form.label :price, class: 'form-label' %>
             <%= form.text_field :price , id: :product_price, class: 'form-control' %>
           </div>
-
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="product_name" type="text" name="name">
+          </div>
 
           <div class="actions">
             <%= form.submit class: 'btn btn-primary'%>

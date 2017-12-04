@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
   <head>
     <title>Store</title>
     <%= csrf_meta_tags %>
@@ -38,10 +38,18 @@
       <li><%= link_to 'landing Page',simple_pages_landing_page_path%></li>
       <li><%= link_to 'About Us', simple_pages_about_path%></li>
       <li><%= link_to 'Contact', simple_pages_contact_path%></li>
-    </ul>
-  </div>
-</nav>
+      </ul>
 
+    <!-- Search Box -->
+    <%= form_tag("/products", method: "get", class:"navbar-form navbar-right") do %>
+        <div class="form-group">
+          <%= label_tag(:q, "Search for:", class:"hidden") %>
+          <%= text_field_tag(:q, "", type:"text", class:"form-control") %>
+        </div>
+        <%= submit_tag("Search", class:"btn btn-default") %>
+    <% end %>
+</div>
+  </nav>
 
 
 <%= yield %>
