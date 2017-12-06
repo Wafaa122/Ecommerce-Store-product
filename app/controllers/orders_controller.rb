@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  class OrdersController < ApplicationController
+  before_action :authenticate_user!
 
     def index
     end
@@ -17,4 +17,3 @@ class OrdersController < ApplicationController
     end
 
   end
-end

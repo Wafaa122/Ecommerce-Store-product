@@ -12,7 +12,7 @@
   </head>
   <style>
     body {
-      padding: 50px;
+      padding: 70px;
     }
 
 
@@ -30,6 +30,9 @@
     </button>
 
   </div>
+
+
+
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="top-navbar-1">
     <ul class="nav navbar-nav navbar-left">
@@ -38,6 +41,17 @@
       <li><%= link_to 'landing Page',simple_pages_landing_page_path%></li>
       <li><%= link_to 'About Us', simple_pages_about_path%></li>
       <li><%= link_to 'Contact', simple_pages_contact_path%></li>
+      <li>
+
+
+        <% if user_signed_in? %>
+            <%= link_to('Log out', destroy_user_session_path, method: :delete) %>
+        <% else %>
+            <%= link_to('Log in', new_user_session_path) %>
+        <% end %>
+
+      </li>
+
       </ul>
 
     <!-- Search Box -->
@@ -50,9 +64,15 @@
     <% end %>
 </div>
   </nav>
+    <% if notice %>
+        <div id="notice" class="alert alert-warning"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+        <div id="alert" class="alert alert-danger"><%= alert %></div>
+    <% end %>
 
 
-<%= yield %>
+    <%= yield %>
     <div class="footer-copyright">
       <div class="container-fluid">
         © 2017 Copyright: wafaa N. Abu Dahrouj
