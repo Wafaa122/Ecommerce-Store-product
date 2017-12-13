@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   root 'simple_pages#index'
   post 'simple_pages/thank_you'
   get  'simple_pages/users'
-  get  'users/users'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
