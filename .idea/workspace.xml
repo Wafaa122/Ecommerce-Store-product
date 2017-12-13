@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f56cc9eb-b824-4ed9-833b-284e4bbf4aa8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Taskone.iml" afterPath="$PROJECT_DIR$/.idea/Taskone.iml" />
     </list>
     <ignored path="Taskone.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -782,15 +782,15 @@
       <workItem from="1512977903186" duration="3683000" />
       <workItem from="1512981650726" duration="3445000" />
       <workItem from="1513188050353" duration="2865000" />
-      <workItem from="1513192355895" duration="4426000" />
+      <workItem from="1513192355895" duration="4661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91983000" />
+    <option name="totallyTimeSpent" value="92218000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
+    <frame x="-1" y="0" width="1368" height="743" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20278184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
