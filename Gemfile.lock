@@ -183,7 +183,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.5)
   jquery-rails
-  listen (>= 3.0.5, < 3.2)
+  listen
   pg
   puma (~> 3.7)
   rails (~> 5.1.4)
