@@ -13,11 +13,15 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-
+  config.assets.initialize_on_precompile = false
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
   # Requires an encryption key in `ENV["RAILS_MASTER_KEY"]` or
   # `config/secrets.yml.key`.
 
+  config.cache_classes = true
+  config.serve_static_assets = true
+  
+  config.assets.digest = true
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
