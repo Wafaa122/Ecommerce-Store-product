@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :orders, only: [:index, :show, :create, :destroy]
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}, controllers: { registrations: "user_registrations" }
+  resources :users
   resources :products do
     resources :comments
   end
+  resources :orders, only: [:index, :show, :create, :destroy]
 
   root 'simple_pages#index'
   get 'contact_form/new'

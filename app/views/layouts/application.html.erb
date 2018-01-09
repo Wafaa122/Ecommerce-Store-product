@@ -42,6 +42,16 @@
       <li><%= link_to 'landing Page',simple_pages_landing_page_path%></li>
       <li><%= link_to 'About Us', simple_pages_about_path%></li>
       <li><%= link_to 'Contact', simple_pages_contact_path%></li>
+      <li><%= link_to "Users", users_path %></li>
+        <li>
+          <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          <% else %>
+              <%= link_to('Log in', new_user_session_path) %>
+          <% end %>
+        </li>
+
+
 
 
       </ul>
@@ -56,7 +66,12 @@
     <% end %>
 </div>
   </nav>
-    
+    <% if notice %>
+        <div id="notice" class="alert alert-warning"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+        <div id="alert" class="alert alert-danger"><%= alert %></div>
+    <% end %>
 
 
     <%= yield %>
